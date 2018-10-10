@@ -17,7 +17,12 @@ Packages Used:
 ## Data
 - Find source for lyrics and create function to access API for each song
 - Create song list of Kanye's body of work
+  - Fill in missing songs
+- Prep text into corpus
+- Vectorize words for use in model
 ## Models
+- Topic Modeling using latent dirichlet allocation and non-negative matrix factorization
+- Word 2 Vec for word grouping
 ## Analysis
 ## Application
 ## Takeaways
