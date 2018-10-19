@@ -2,15 +2,10 @@
 
 ---
 
-__An exploration into Kanye's lyrics changing over time using Machine Learning__
+__An exploration into Kanye's lyrics and state of mind using Machine Learning__
 
-> "I miss the old Kanye"
-> "He's lost it"
 
-Kanye West is highly polarizing figure due to his atypical behavior and rece. 
-On his most recent album declar bipolar
-easy to scoff or dismiss as crzy
-bipolar affects x number of people in parts ofthier
+Kanye West is highly polarizing figure due to his recent behavior and publicly questionable conduct back to the MTV awards in 200X. Recently, on his latest album _ye_, he declares on the cover “I hate being Bi-Polar, its awesome” and sings about it being his superpower on the song _Yikes_. It may be easy to scoff at or dismiss such a condition as being crazy but the reality of bipolar disorder affectsing (x number) of people is an actual problem needing to be addressed. 
 
 
 __Resources Used:__
@@ -75,7 +70,7 @@ album_dict = sp.artist_albums(Kanye_spotify_id,country='US')
 ## Models
 
 - Topic Modeling using Latent Dirichlet Allocation (LDA) and non-negative matrix factorization (NMF)
-  - evaluation convergenc
+  - evaluation convergence
 - Word 2 Vec for word grouping
 ## Analysis
 
@@ -83,7 +78,11 @@ album_dict = sp.artist_albums(Kanye_spotify_id,country='US')
 
 ## Futurework
 
+There is need to continue the stagnant conversation around mental health and what tools we use to connect those that struggle with issues with the proper resources. What we can discover can help the millions of not only those living with bipolar disorder but the ones who care about them
+
+
 ## Takeaways
 
+
 Data:
-> __Song __
+> __Song text data can be inconsistent and difficult to align__
