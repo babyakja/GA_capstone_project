@@ -38,6 +38,8 @@ How has Kanye's changed as an artist and person and what can we learn using mach
 
 ## Data
 
+_Obtain the Data_
+
 __1. Find source for lyrics and create function to access API for each song__
   - My preference was to use a reliable API for lyrics to be able to collect all of Kanye's song. I started by seaching for possible APIs and settled on using Orion Apieseed lyric API. This API allowed to search by song and artist and returned the lyrics for each song. To use this, I just needed to generate a list of each of Kanye's song.
   
@@ -57,22 +59,32 @@ album_dict = sp.artist_albums(Kanye_spotify_id,country='US')
 __3. Collect lyrics__
   - Once a full list of of Kanye's song was made, I could pass the list into a function I built to collect the lyrics from Orion Apiseed. After starting extracting, it became quite clear there was an issue since I was getting quite a bit of 404's. What was occuring was a mismatch in song title with what was available in the Orion API. This was either due to __A)__ slight variation in the song title between Orion and Spotify or __B)__ Orion not having the song in their API.
 
-  3a. Fill in missing songs
+  _3a. Fill in missing songs_
+  
+  -  There was a total of 29 songs that were not able to collect lyrics for using the Orion API. In order to fill in the gaps, I decide not to use an API and instead rely on scraping the Genius lyric site using Beautiful Soup. Understand source. Text cleaning. Extraxt data. 
+  
+_Explore the Data_
+
+> __128__ Unique Songs | __14__ Albums
   
 1. Prep text into corpus
   - stop words (preloaded and custom)
   - stemming
   
-1. Vectorize words for use in model
+2. Vectorize words for use in model
   - _Count Vectorizer_ Count Frequency
   - _TFIDF Vectorizer_ Term Frequency times inverse document frequency (TFIDF)
 
 ## Models
 
+_ Model the Data using Unsupervised Learning_
+
 - Topic Modeling using Latent Dirichlet Allocation (LDA) and non-negative matrix factorization (NMF)
   - evaluation convergence
 - Word 2 Vec for word grouping
 ## Analysis
+
+_Evaluate the Data_
 
 - Change
 
@@ -81,8 +93,11 @@ __3. Collect lyrics__
 There is need to continue the stagnant conversation around mental health and what tools we use to connect those that struggle with issues with the proper resources. What we can discover can help the millions of not only those living with bipolar disorder but the ones who care about them
 
 
-## Takeaways
+## Conclusion
 
+_Answer the Problem_
+
+_Takeaways_
 
 Data:
 > __Song text data can be inconsistent and difficult to align__
