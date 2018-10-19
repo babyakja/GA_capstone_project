@@ -46,7 +46,7 @@ How has Kanye's changed as an artist and person and what can we learn using mach
 `url = "https://orion.apiseeds.com/api/music/lyric/" + artist + "/" + song + "?apikey=" + orion_keys['api_key']`
 
 1. Create song list of Kanye's body of work
-  - To generate a full list of Kanye's discography, I wanted to use the most consistent and full reference of work available from him. Spotify was the obvious choice and fortunely there was Spotify wrapper available that allowed accessing using a Python library relatively easy. THis 
+  - To generate a full list of Kanye's discography, I wanted to use the most consistent and full reference of work available from him. Spotify was the obvious choice and fortunely there was Spotify wrapper available that allowed accessing using a Python library relatively easy. To access each song, I first had to look up each of Kanye's album using the album id used by Spotify and then extract from the returned dictionary the song name of each entry. Some simple `FOR` loops and function building made this part relatively easy.
 
 ```
 from spotipy import Spotify
@@ -57,7 +57,7 @@ Kanye_spotify_id = '5K4W6rqBFWDnAN6FQUkS6x'
 album_dict = sp.artist_albums(Kanye_spotify_id,country='US')
 ```
 1. Collect lyrics
-  - Started and had access, quite a bit of 404's
+  - Once a full list of of Kanye's song was made, I could pass the list into a function I built to collect the lyrics from Orion Apiseed. After starting extracting, it became quite clear there was an issue since I was getting quite a bit of 404's. What was occuring was a mismatch 
 
   1. Fill in missing songs
   
@@ -81,3 +81,6 @@ album_dict = sp.artist_albums(Kanye_spotify_id,country='US')
 ## Futurework
 
 ## Takeaways
+
+Data:
+> __Song __
