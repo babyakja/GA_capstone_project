@@ -153,10 +153,12 @@ Topics were able to be assigned to each song and showed a change around the rele
 _Takeaways_
 
 Data:
+
 > __Song text data can be inconsistent and difficult to align__
 > __Balancing manual text cleaning with scalable operations is extremely helpful__
 
 Model:
+
 > __Topic Modeling can assist in finding overarching groups, focus on need (static vs dynamic)__
 > __Word2Vec creates reliable word association grouping and can be useful on a much larger corpus__
 > __t-SNE can be a great visual tool but difficult to fine tune for classification purposes__
