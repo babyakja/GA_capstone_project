@@ -111,13 +111,14 @@ for song in df_lyrics.sort_values('release_date').lyrics_word2vec:
 _Model the Data using Unsupervised Learning_
 
 - Topic Modeling using Latent Dirichlet Allocation (LDA) and non-negative matrix factorization (NMF)
+  - 
   - evaluation convergence
 - Word 2 Vec for word grouping
 ## Analysis
 
 _Evaluate the Data_
 
-- Change
+- 
 
 ## Futurework
 
@@ -128,7 +129,11 @@ There is need to continue the stagnant conversation around mental health and wha
 
 _Answer the Problem_
 
+
 _Takeaways_
 
 Data:
 > __Song text data can be inconsistent and difficult to align__
+
+Model:
+> ____
