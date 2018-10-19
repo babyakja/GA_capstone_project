@@ -10,12 +10,7 @@ easy to scoff or dismiss as crzy
 bipolar affects x number of people in parts ofthier
 
 
----
-
-## Objective
-How has Kanye's changed as an artist and person and what can we learn using machine learning about detecting bipolar tendencies and behavior changes?
-
-Resources Used:
+__Resources Used:__
 - Data Collection and Cleaning
   - API's
   - webscraping
@@ -26,13 +21,20 @@ Resources Used:
   - Word2Vec
   - t-SNE
 
-Packages Used:
+__Packages Used:__
 - JSON
 - Pandas
 - BeautifulSoup
 - sklearn
 - gensim
 - NLTK
+
+---
+
+## Objective
+
+_Problem Statement_
+How has Kanye's changed as an artist and person and what can we learn using machine learning about detecting bipolar tendencies and behavior changes?
 
 ## Data
 
