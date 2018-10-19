@@ -4,6 +4,9 @@
 
 __An exploration into Kanye's lyrics changing over time using Machine Learning__
 
+> "I miss the old Kanye"
+> "He's lost it"
+
 Kanye West is highly polarizing figure due to his atypical behavior and rece. 
 On his most recent album declar bipolar
 easy to scoff or dismiss as crzy
