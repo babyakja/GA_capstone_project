@@ -5,7 +5,7 @@
 __An exploration into Kanye's lyrics and state of mind using Machine Learning__
 
 
-Kanye West is highly polarizing figure due to his recent behavior and publicly questionable conduct back to the MTV awards in 200X. Recently, on his latest album _ye_, he declares on the cover “I hate being Bi-Polar, its awesome” and sings about it being his superpower on the song _Yikes_. It may be easy to scoff at or dismiss such a condition as being crazy but the reality of bipolar disorder affectsing (x number) of people is an actual problem needing to be addressed. 
+Kanye West is highly polarizing figure due to his recent behavior and publicly questionable conduct back to the MTV awards in 200X. Recently, on his latest album __ye__, he declares on the cover _“I hate being Bi-Polar, its awesome”_ and sings about it being his superpower on the song _Yikes_. It may be easy to scoff at or dismiss such a condition as being crazy but the reality of bipolar disorder affecting 6.86 million U.S. adults annually is an actual problem needing to be addressed. 
 
 
 __Resources Used:__
@@ -65,7 +65,7 @@ __3. Collect lyrics__
   
 _Explore the Data_
 
-> __14__ Albums | __128__ Unique Songs | __62,648__ Total Words
+> __14__ Albums | __128__ Unique Songs | __62,648__ Total Words Used
 
 In order to feed lyrics into the various models I used, signifcant time was spent on cleaning and making the data that was collected useable.
   
@@ -74,9 +74,28 @@ __1. Prep text into corpus__
   - __Stop Words:__ Stop word were removed covering basic words and I experimented using the starting list from `NLTK` and `sklearn` english words since they had different totals to start with. 
   - __Stemming:__
   
-2. Vectorize words for use in model
-  - _Count Vectorizer_ Count Frequency
-  - _TFIDF Vectorizer_ Term Frequency times inverse document frequency (TFIDF)
+__2. Vectorize words for use in model__
+  - In order to seperate words in preparation for topic modeling or classification, the cleaned lyrics corpus is 
+  - __Count Vectorizer:__ Total Count Frequency
+  ```
+  cvec = CountVectorizer(min_df=5,
+                       max_df=0.95,
+                       stop_words=stop,
+                       ngram_range=(1,1),
+                      )
+count = cvec.fit_transform(corpus_lem);
+```
+  - __TFIDF Vectorizer:__ Term Frequency times inverse document frequency (TFIDF)
+  ```
+  tvec = TfidfVectorizer(min_df=5,
+                       max_df=0.85,
+                       stop_words=stop,
+                       ngram_range=(1,3),
+                      )
+tfidf = tvec.fit_transform(corpus_lem);
+```
+  
+__3. Split lines (for Word2Vec)__
 
 ## Models
 
