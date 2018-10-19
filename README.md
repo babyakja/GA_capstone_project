@@ -65,12 +65,14 @@ __3. Collect lyrics__
   
 _Explore the Data_
 
+> __14__ Albums | __128__ Unique Songs | __62,648__ Total Words
+
 In order to feed lyrics into the various models I used, signifcant time was spent on cleaning and making the data that was collected useable.
   
 __1. Prep text into corpus__
-  - Some lyric data also contain reference to certain parts of the song (i.e. name of collaborating artist and needed 
-  - stop words (preloaded and custom)
-  - stemming
+  - __Regex:__ Some lyric data also contain reference to certain parts of the song (i.e. name of collaborating artist) and needed to be removed since it wasn't essential to the analysis. This was completed by feeding words through regex using `r"\[[^\]]*\]"` as the sorting method. 
+  - __Stop Words:__ Stop word were removed covering basic words and I experimented using the starting list from `NLTK` and `sklearn` english words since they had different totals to start with. 
+  - __Stemming:__
   
 2. Vectorize words for use in model
   - _Count Vectorizer_ Count Frequency
