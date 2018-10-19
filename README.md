@@ -110,30 +110,53 @@ for song in df_lyrics.sort_values('release_date').lyrics_word2vec:
 
 _Model the Data using Unsupervised Learning_
 
-- Topic Modeling using Latent Dirichlet Allocation (LDA) and non-negative matrix factorization (NMF)
-  - 
-  - evaluation convergence
-- Word 2 Vec for word grouping
+To coduct Topic Modeling two different models were tested from the sklearn feature extraction library:
+  - Latent Dirichlet Allocation (LDA) 
+  - non-negative matrix factorization (NMF)
+
+Each model type was feed either the count vectorizer results or the TFIDF vectorizer results. At first, the  decision on how many number of topics to use was difficult to isolate on where to draw the line. To help this, I used the coherence score in `gensim` to map how well the topics were coherent.
+
+- Coherence Score
+Low number of topics scored higher at 2 or 3 topics. This provided
+
+Ultimately, I settled on using 7 topics that were distinct enough groups to look for the changes in topic discussion I was looking for.
+
 ## Analysis
 
 _Evaluate the Data_
 
-- 
+Topics that were able to be isolated:
+- Topic 1: 
+- Topic 2:
+- Topic 3:
+- Topic 4:
+- Topic 5:
+- Topic 6:
+- Topic 7:
+
+
+- Silhouette Score
+
+Evaluating how well the 
 
 ## Futurework
 
-There is need to continue the stagnant conversation around mental health and what tools we use to connect those that struggle with issues with the proper resources. What we can discover can help the millions of not only those living with bipolar disorder but the ones who care about them
+There is need to continue the stagnant conversation around mental health and what tools we use to connect those that struggle with issues with the proper resources. What we can discover can help the millions of people not only living with bipolar disorder but also their friends, families, and coworkers manage a often misunderstood disorder.
 
 
 ## Conclusion
 
 _Answer the Problem_
 
+Topics were able to be assigned to each song and showed a change around the release of _My Beautiful Dark Twisted Fantasy_ in general topics. This does not indicate this was when behavior was more. Training a vocabulary associated with bipolar disorder can improve on what can be associated as 
 
 _Takeaways_
 
 Data:
 > __Song text data can be inconsistent and difficult to align__
+> __Balancing manual text cleaning with scalable operations is extremely helpful__
 
 Model:
-> ____
+> __Topic Modeling can assist in finding overarching groups, focus on need (static vs dynamic)__
+> __Word2Vec creates reliable word association grouping and can be useful on a much larger corpus__
+> __t-SNE can be a great visual tool but difficult to fine tune for classification purposes__
