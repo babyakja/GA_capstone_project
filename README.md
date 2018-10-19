@@ -75,7 +75,7 @@ __1. Prep text into corpus__
   - __Stemming:__
   
 __2. Vectorize words for use in model__
-  - In order to seperate words in preparation for topic modeling or classification, the cleaned lyrics corpus is 
+  - In order to seperate words in preparation for topic modeling or classification, the cleaned lyrics corpus was prepared in both a count vectorizer and a TFIDIF vectorizer. Both were used to pass words into the LDA and NMF models and analyzed for effectiveness. Below contains a snapshot of the parameters used for each. 
   - __Count Vectorizer:__ Total Count Frequency
   ```
   cvec = CountVectorizer(min_df=5,
@@ -96,6 +96,15 @@ tfidf = tvec.fit_transform(corpus_lem);
 ```
   
 __3. Split lines (for Word2Vec)__
+
+Additionally, lyric data needed to be prepared as a list of list to be feed into the Word2Vec model to create word similarities.
+
+```
+text_corpus_w2v = []
+for song in df_lyrics.sort_values('release_date').lyrics_word2vec:
+    for line in song:
+        text_corpus_w2v.append(line)
+```
 
 ## Models
 
