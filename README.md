@@ -19,7 +19,7 @@ __Resources Used:__
   - Word2Vec
   - t-SNE
 
-__Packages Used:__
+__Python Packages Used:__
 - JSON
 - Pandas
 - BeautifulSoup
@@ -61,13 +61,14 @@ __3. Collect lyrics__
 
   _3a. Fill in missing songs_
   
-  -  There was a total of 29 songs that were not able to collect lyrics for using the Orion API. In order to fill in the gaps, I decide not to use an API and instead rely on scraping the Genius lyric site using Beautiful Soup. Understand source. Text cleaning. Extraxt data. 
+  -  There was a total of 29 songs that were not able to collect lyrics for using the Orion API. In order to fill in the gaps, I decide not to use an API and instead rely on scraping the Genius lyric site using Beautiful Soup. After inspecting their site and understanding I built a function to scrape the site for the missing songs. In order to use the function, some song titles had to be reformated and condensed to fit into a useable url for the Genius site. Using the function, all remain lyrics were able to be collected. 
   
 _Explore the Data_
 
-> __128__ Unique Songs | __14__ Albums
+In order to feed lyrics into the various models I used, signifcant time was spent on cleaning and making the data that was collected useable.
   
-1. Prep text into corpus
+__1. Prep text into corpus__
+  - Some lyric data also contain reference to certain parts of the song (i.e. name of collaborating artist and needed 
   - stop words (preloaded and custom)
   - stemming
   
@@ -77,7 +78,7 @@ _Explore the Data_
 
 ## Models
 
-_ Model the Data using Unsupervised Learning_
+_Model the Data using Unsupervised Learning_
 
 - Topic Modeling using Latent Dirichlet Allocation (LDA) and non-negative matrix factorization (NMF)
   - evaluation convergence
