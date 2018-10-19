@@ -38,10 +38,12 @@ How has Kanye's changed as an artist and person and what can we learn using mach
 
 ## Data
 
-1. Find source for lyrics and create function to access API for each song
-  - My preference was to use a reliable API for lyrics to be able to collect all of Kanye's song. I started by seaching for possible APIs and settled on using Orion Apieseed lyric API. This API allowed to search by song and artist and returned the lyrics for each song. To use this, I just need a list of each of Kanye's song   
+__1. Find source for lyrics and create function to access API for each song__
+  - My preference was to use a reliable API for lyrics to be able to collect all of Kanye's song. I started by seaching for possible APIs and settled on using Orion Apieseed lyric API. This API allowed to search by song and artist and returned the lyrics for each song. To use this, I just needed to generate a list of each of Kanye's song.
+  
 `url = "https://orion.apiseeds.com/api/music/lyric/" + artist + "/" + song + "?apikey=" + orion_keys['api_key']`
-1. Create song list of Kanye's body of work
+
+__2. Create song list of Kanye's body of work__
   - To generate a full list of Kanye's discography, I wanted to use the most consistent and full reference of work available from him. Spotify was the obvious choice and fortunely there was Spotify wrapper available that allowed accessing using a Python library relatively easy. To access each song, I first had to look up each of Kanye's album using the album id used by Spotify and then extract from the returned dictionary the song name of each entry. Some simple `FOR` loops and function building made this part relatively easy.
 
 ```
@@ -52,10 +54,10 @@ from spotipy.oauth2 import SpotifyClientCredentials
 Kanye_spotify_id = '5K4W6rqBFWDnAN6FQUkS6x'
 album_dict = sp.artist_albums(Kanye_spotify_id,country='US')
 ```
-1. Collect lyrics
-  - Once a full list of of Kanye's song was made, I could pass the list into a function I built to collect the lyrics from Orion Apiseed. After starting extracting, it became quite clear there was an issue since I was getting quite a bit of 404's. What was occuring was a mismatch 
+__3. Collect lyrics__
+  - Once a full list of of Kanye's song was made, I could pass the list into a function I built to collect the lyrics from Orion Apiseed. After starting extracting, it became quite clear there was an issue since I was getting quite a bit of 404's. What was occuring was a mismatch in song title with what was available in the Orion API. This was either due to __A)__ slight variation in the song title between Orion and Spotify or __B)__ Orion not having the song in their API.
 
-  1. Fill in missing songs
+  3a. Fill in missing songs
   
 1. Prep text into corpus
   - stop words (preloaded and custom)
