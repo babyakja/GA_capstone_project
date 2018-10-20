@@ -7,9 +7,6 @@ __An exploration into Kanye's lyrics and state of mind using Machine Learning__
 
 Kanye West is highly polarizing figure currentlt in mainstream culture due to his recent behavior and publicly questionable conduct all the way back to the MTV awards in 2009. Recently, on his latest album __ye__, he declares on the cover _“I hate being Bi-Polar, its awesome”_ and writes about bipoar disorder being his superpower on the track _Yikes_. It may be easy to scoff at or dismiss such actions as being crazy but the reality is bipolar disorder affects 6.86 million U.S. adults annually and is a problem needing to be addressed.
 
-Common problems with bipolar disorder treatment include initially being misdiagnosed, denial of treatment, and
-
-
 __Resources Used:__
 - Data Collection and Cleaning
   - API's
