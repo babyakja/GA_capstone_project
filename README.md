@@ -134,7 +134,6 @@ Topics that were able to be isolated:
 - Topic 6:
 - Topic 7:
 
-
 - Silhouette Score
 
 Evaluating how well the 
@@ -143,22 +142,27 @@ Evaluating how well the
 
 There is need to continue the stagnant conversation around mental health and what tools we use to connect those that struggle with issues with the proper resources. What we can discover can help the millions of people not only living with bipolar disorder but also their friends, families, and coworkers manage a often misunderstood disorder.
 
+- Train / test using source of data 
+
 
 ## Conclusion
 
 _Answer the Problem_
 
-Topics were able to be assigned to each song and showed a change around the release of _My Beautiful Dark Twisted Fantasy_ in general topics. This does not indicate this was when behavior was more. Training a vocabulary associated with bipolar disorder can improve on what can be associated as 
+Topics were able to be assigned to each song and showed a change around the release of _My Beautiful Dark Twisted Fantasy_ in general topics per song. This does not indicate there was any changes that can be associated with behavior at this time. Training a vocabulary associated with bipolar disorder can improve these results if what can be associated could be more relevant on a higher frequency dataset such as tweets or other social media posts.
 
 _Takeaways_
 
 Data:
 
 > __Song text data can be inconsistent and difficult to align__
+
 > __Balancing manual text cleaning with scalable operations is extremely helpful__
 
 Model:
 
 > __Topic Modeling can assist in finding overarching groups, focus on need (static vs dynamic)__
+
 > __Word2Vec creates reliable word association grouping and can be useful on a much larger corpus__
+
 > __t-SNE can be a great visual tool but difficult to fine tune for classification purposes__
