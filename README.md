@@ -94,7 +94,9 @@ __1. Prep text into corpus__
 
 __2. Vectorize words for use in model__
   - In order to separate words in preparation for topic modeling or classification, the cleaned lyrics corpus was prepared in both a count vectorizer and a TFIDIF vectorizer. Both were used to pass words into the LDA and NMF models and analyzed for effectiveness. Below contains a snapshot of the parameters used for each.
+  
   - __Count Vectorizer:__ Total Count Frequency
+  
   ```python
   cvec = CountVectorizer(min_df=5,
                        max_df=0.95,
@@ -104,6 +106,7 @@ __2. Vectorize words for use in model__
 count = cvec.fit_transform(corpus_lem);
 ```
   - __TFIDF Vectorizer:__ Term Frequency times inverse document frequency (TFIDF)
+  
   ```python
   tvec = TfidfVectorizer(min_df=5,
                        max_df=0.85,
@@ -140,7 +143,7 @@ Each model type was feed either the count vectorizer results or the TFIDF vector
 
 I chose to use a metric called __Coherence Score__ to help in this process. The coherence score can be calculated across different topic numbers and compare to see which provide the right fidelity to the level you are looking for. My intention was to allocate songs into as many topics as possible that were descriptive but so much that isolated one song per topic. On the flip side, selecting too few topics lumps almost all songs into general groups where uniqueness cannot be easily defined.
 
-![Coherence](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Coherence Score.png)
+![Coherence](https://raw.githubusercontent.com/babyakja/babyakja.github.io/master/assets/img/posts/Coherence%Score.png)
 
 _Evaluate the Data_
 
